@@ -1,0 +1,17 @@
+
+
+
+GET http://localhost:3001/api/users/login
+
+
+###
+
+
+POST http://localhost:3001/users/
+Content-Type: application/json
+{
+    "user_name": "dennis",
+    "email": "dennis@none.com",
+    "password": "123456789",
+
+}

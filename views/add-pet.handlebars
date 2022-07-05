@@ -1,0 +1,37 @@
+<div class="card w-50 mx-auto p-2 text-center" style="background-color:
+    #F2D7D9; margin-top: 7vw;">
+    <form class="form new-blog-form p-2">
+        <div class="card-body">
+            <h1>Create Pet Profile</h1>
+        </div>
+        <div class="">
+           
+            <div><input class="form-input" type="text" id="PetName" placeholder="Pet Name" name="PetName" /></div>
+        </div>
+        <div>
+           
+            <div><input class="form-input" type="text" id="PetBreed" placeholder="Breed" name="PetBreed" /></div>
+        </div>
+        <div>
+            
+            <div><input class="form-input" type="text" id="PetAge" placeholder="Age" name="PetAge" /></div>
+        </div>
+        <div>
+            
+            <div><input class="form-input" type="text" id="PetImage" placeholder="Image Link" name="PetImage" /></div>
+        </div>
+        <div class="">
+            <input type="hidden" id="UserName" name="UserName" value="{{User.Name}}">
+            <button type="submit" class="btn btn-primary" id="addPet">Add Pet to
+                Profile</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+<script src="/js/addPet.js"></script>

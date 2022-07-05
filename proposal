@@ -1,0 +1,39 @@
+Project title : Pet Play Date
+
+Description
+A website for setting up and tracking playdates for your pet.
+
+User story:
+As A responsible pet owner.
+I Want to schedule a playdate for my pet.
+So That my pet is well socialized and healthy.
+
+WALKTHROUGH
+User goes to website / may log in
+User is presented with a selection of CARDS of pets already looking for playdates
+User may Sign Up or Sign In or Select CARD Playdate
+IF User is not signed in and selects a card, they are brought to Login page
+IF already logged in may see playdate details
+User may mark themselves as ATTENDEE or CREATE EVENT
+
+User Profile Page:
+	Add pet profile (one or many)
+	Add owner details
+	Create Event
+	Manage Attendees
+
+Task Breakup:
+Express Server
+Handlebars
+Be responsive
+MySQL
+Pet
+	Breed, Age, Owner_id, image
+Owner
+	Name Email
+PlayDate
+	Date, Attendees = Owner_id, Host = Owner_id, pets= pet_id,location
+
+Packages Used
+Uploader
+Nodemon

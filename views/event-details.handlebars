@@ -1,0 +1,56 @@
+<div class="jumbotron h-100 text-center">
+    <div class="row">
+        <div class="col-3 bg-light">
+
+            {{!-- Event Details Box --}}
+            <div class="card m-4">
+                <div class="card-header">
+                   <h3>{{playDate.location}}</h3> 
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Hosted By:
+                        {{playDate.user.user_name}}</h5>
+                    <p class="card-text">Date: {{playDate.date}}<br>Time:
+                        {{playDate.time}} </p>
+                    <a id="join-event" class="btn btn-primary">RSVP</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col d-flex flex-wrap">
+
+            <!-- Attendees List -->
+            <div class="center-text mx-auto">
+                <h1>Attendees list</h1>
+            </div>
+            
+           
+
+<div class="row d-flex flex-wrap">
+    {{#each playDate.pets as |pet|}}
+                <div class="card rounded m-3 w-25" style="width: 15rem;">
+                    <img class="card-img-top" src={{pet.image}} alt="{{pet.pet_name}}">
+                    <h5 class="card-header text-center">{{pet.pet_name}}</h5>
+                    <div class="card-body">
+                        <p class="card-text">Breed: {{pet.breed}}</p>
+                        <p class="card-text">Age: {{pet.age}}</p>
+                        <p class="card-text">Owner: {{pet.user.user_name}}</p>
+                    </div>
+                </div>
+                {{/each}}
+</div>
+                
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/joinEvent.js"></script>

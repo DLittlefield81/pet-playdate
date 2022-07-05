@@ -1,0 +1,52 @@
+
+
+<div class="jumbotron h-100" script="margin-top: 5vw;">
+  <div class="row">
+    <div class="col-3 bg-light">
+      <h1 class="text-center">Create Playdate</h1>
+{{!-- Create Playdate Form --}}
+      <form class="form new-blog-form p-1" id="create_event">
+        <div class="form-group p-1">
+          <label for="event_date">What day would you like to have the playdate?</label>
+          <input class="form-input" type="date" id="event_date"
+            name="event_date" />
+        </div>
+        <div class="form-group p-1">
+          <label for="event_time">What time is the playdate?</label>
+          <input class="form-input" type="time" id="event_time"
+            name="event_time" />
+        </div>
+        <div class="form-group p-1">
+          <label for="event_location">Where is the playdate going to be held?</label>
+          <input class="form-input" type="text" id="event_location"
+            name="event_location" />
+        </div>
+        <div class="form-group p-1">
+          <input class="form-input" type="hidden" id="user_id" name="user_id"
+            value="{{this.id}}" />
+          <button type="submit" class="btn btn-primary" id="create_event">Create
+            Playdate</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-6 d-flex flex-wrap">
+ {{!-- Pet Profiles --}}
+
+      {{#each user.pets as |pet|}}
+      <div class="card m-3 text-center align-self-start" style="width: 15rem;">
+        <img class="card-img-top img-rounded profileImage" src="{{pet.image}}"
+          alt="{{pet.pet_name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{pet.pet_name}}</h5>
+          <p class="card-text">Age: {{pet.age}} <br>Breed: {{pet.breed}}</p>
+          <a class="btn btn-info remove-btn">Remove</a>
+        </div>
+      </div>
+      {{/each}}
+   
+    </div>
+  </div>
+</div>
+
+
+<script src="/js/addEvent.js"></script>

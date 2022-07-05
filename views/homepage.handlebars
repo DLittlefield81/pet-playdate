@@ -1,0 +1,26 @@
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h1 class="display-4">Where pets come to socialize</h1>
+    <p class="lead">Welcome to pet playdate an events page for your pet to play
+      with other pets.</p>
+  </div>
+
+  <div class="row">
+    <div class="d-flex flex-wrap">
+      {{#each playDates as |playdate| }}
+      <div class="text-center m-3">
+        <div class="card" style="width: 15rem;">
+          <div class="card-body">
+            <h5 class="card-title rounded p-2" style="background-color:
+              #D3CEDF;">{{playdate.location}}</h5>
+            <p class="card-text">Date: {{playdate.date}}<br>Time:
+              {{playdate.time}}<br>Hosted By: {{playdate.user.user_name}}</p>
+            <a href="/event/{{playdate.id}}" class="btn"
+              style="background-color: #9CB4CC;">View Details</a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

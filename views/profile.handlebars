@@ -1,0 +1,123 @@
+<div class="jumbotron h-100">
+  <div class="row">
+    <div class="col-2 bg-light">
+
+      <!-- Large area for pet owner details -->
+      <div class="text-center justify-content-center h-100 p-2">
+        <h1 class="display-6">Hello, {{this.user_name}}</h1>
+        <p class="lead"><input class="form-control p-1" type="text" id="name"
+            name="name" value="{{this.user_name}}"></p>
+        <p><input class="form-control p-1" type="text" id="email" name="email"
+            value="{{this.email}}"></p>
+        <p class="lead">
+          <a class="btn btn-info btn-lg" id="update-info" role="button">Update
+            Profile</a>
+        </p>
+        <p class="lead">
+          <a href="/addpet/" class="btn btn-info btn-lg" id="update-info" role="button">Add Pet</a>
+        </p>
+      </div>
+
+    </div>
+    <div class="col-8 d-flex flex-wrap m-2">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+      {{!-- Row --}}
+      <h3>Attending</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Location</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each play as |playdates|}}
+    <tr>
+      <th scope="row">{{playdates.date}}</th>
+      <td>{{playdates.time}}</td>
+      <td>{{playdates.location}}</td>
+      <td><a href="/event/{{playdates.id}}">👁‍🗨</a></td>
+    </tr>
+{{/each}}
+  </tbody>
+</table>
+
+    </div>
+    <div class="w-100">
+    </div>
+    <div class="col">
+
+      {{!-- Row --}}
+      <h3>Hosting</h3>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Location</th>
+      <th scope="col">View</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+{{#each playdates as |play|}}
+    <tr>
+      <th scope="row">{{play.date}}</th>
+      <td>{{play.time}}</td>
+      <td>{{play.location}}</td>
+      <td><a href="/event/{{play.id}}">👁‍🗨</a></td>
+      <td><a class="del-event" href=""><p hidden>{{play.id}}</p><div
+                  class="card-footer bg-transparent text-danger text-center">❌
+                  </div></a></td>
+    </tr>
+{{/each}}
+  </tbody>
+</table>
+
+    </div>
+  </div>
+</div>
+
+<!-- Cards across for each pet owned -->
+      <div class="text-center rounded m-5 d-flex flex-wrap
+        justify-content-center"><div class="col-8"><h3>My Pets</h3></div><hr>
+        {{#each pets as |pet|}}
+        <div class="card m-1 text-center align-self-start" style="width:
+          10rem;">
+          <img class="card-img-top img-rounded profileImage" src="{{pet.image}}"
+            alt="{{pet.pet_name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{pet.pet_name}}</h5>
+            <p class="card-text">Age: {{pet.age}} <br>Breed: {{pet.breed}}</p>
+            <a class="btn btn-info remove-btn">Remove</a>
+          </div>
+        </div>
+        {{/each}}
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/removePet.js"></script>
+<script src="/js/updateUser.js"></script>
+<script src="/js/deleteEvent.js"></script>
