@@ -45,16 +45,16 @@ Follow these steps to install this project on your local machine.
 
 
 ## Images
-- -![ECommerceBackEnd](./public/images/pet-playdate.png)
+- -![PetPlaydate](./public/images/pet-playdate.png)
 
 ## Tests
 - node run test
 
 
 ## Questions
-- Username: 
-- GitHub: 
-- Email: 
+- Username: Dlittlefield81
+- GitHub: https://github.com/DLittlefield81/
+- Email: Littlefield.Dennis@outlook.com
 
 
 ## Contributing
