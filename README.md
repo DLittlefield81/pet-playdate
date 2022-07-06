@@ -31,7 +31,7 @@ Follow these steps to install this project on your local machine.
 - Open Bash editor
 - mkdir pet-playdate
 - cd pet-playdate
-- git clone https://github.com/abdallajama201/pet-playdate.git
+- git clone https://github.com/DLittlefield81/pet-playdate.git
 - npm i
 
 
@@ -41,7 +41,7 @@ Follow these steps to install this project on your local machine.
 - Developer mode: npm run dev
 
 ## Application
-- Link to Deployed Application: HEROKU LINK
+- Link to Deployed Application: https://pet-play-date.herokuapp.com/
 
 
 ## Images
